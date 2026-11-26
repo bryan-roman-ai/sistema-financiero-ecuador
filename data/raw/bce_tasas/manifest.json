@@ -1,0 +1,297 @@
+{
+  "2022-01": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes012022.htm",
+    "status": 200,
+    "bytes": 46854
+  },
+  "2022-02": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes022022.htm",
+    "status": 200,
+    "bytes": 46854
+  },
+  "2022-03": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes032022.htm",
+    "status": 200,
+    "bytes": 39901
+  },
+  "2022-04": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes042022.htm",
+    "status": 200,
+    "bytes": 42184
+  },
+  "2022-05": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes052022.htm",
+    "status": 200,
+    "bytes": 42180
+  },
+  "2022-06": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes062022.htm",
+    "status": 200,
+    "bytes": 43147
+  },
+  "2022-07": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes072022.htm",
+    "status": 200,
+    "bytes": 43146
+  },
+  "2022-08": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes082022.htm",
+    "status": 200,
+    "bytes": 57568
+  },
+  "2022-09": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes092022.htm",
+    "status": 200,
+    "bytes": 57225
+  },
+  "2022-10": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes102022.htm",
+    "status": 200,
+    "bytes": 57224
+  },
+  "2022-11": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes112022.htm",
+    "status": 200,
+    "bytes": 57229
+  },
+  "2022-12": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes122022.htm",
+    "status": 200,
+    "bytes": 62868
+  },
+  "2023-01": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes012023.htm",
+    "status": 200,
+    "bytes": 62868
+  },
+  "2023-02": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes022023.htm",
+    "status": 200,
+    "bytes": 63919
+  },
+  "2023-03": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes032023.htm",
+    "status": 200,
+    "bytes": 63919
+  },
+  "2023-04": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes042023.htm",
+    "status": 200,
+    "bytes": 63923
+  },
+  "2023-05": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes052023.htm",
+    "status": 200,
+    "bytes": 63900
+  },
+  "2023-06": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes062023.htm",
+    "status": 200,
+    "bytes": 62401
+  },
+  "2023-07": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes072023.htm",
+    "status": 200,
+    "bytes": 48351
+  },
+  "2023-08": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes082023.htm",
+    "status": 200,
+    "bytes": 48293
+  },
+  "2023-09": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes092023.htm",
+    "status": 200,
+    "bytes": 48337
+  },
+  "2023-10": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes102023.htm",
+    "status": 200,
+    "bytes": 48301
+  },
+  "2023-11": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes112023.htm",
+    "status": 200,
+    "bytes": 47768
+  },
+  "2023-12": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes122023.htm",
+    "status": 200,
+    "bytes": 48098
+  },
+  "2024-01": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes012024.htm",
+    "status": 200,
+    "bytes": 47752
+  },
+  "2024-02": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes022024.htm",
+    "status": 200,
+    "bytes": 47754
+  },
+  "2024-03": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes032024.htm",
+    "status": 200,
+    "bytes": 48077
+  },
+  "2024-04": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes042024.htm",
+    "status": 200,
+    "bytes": 48087
+  },
+  "2024-05": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes052024.htm",
+    "status": 200,
+    "bytes": 48073
+  },
+  "2024-06": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes062024.htm",
+    "status": 200,
+    "bytes": 48115
+  },
+  "2024-07": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes072024.htm",
+    "status": 200,
+    "bytes": 48116
+  },
+  "2024-08": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes082024.htm",
+    "status": 200,
+    "bytes": 48119
+  },
+  "2024-09": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes092024.htm",
+    "status": 200,
+    "bytes": 48731
+  },
+  "2024-10": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes102024.htm",
+    "status": 200,
+    "bytes": 48143
+  },
+  "2024-11": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes112024.htm",
+    "status": 200,
+    "bytes": 48145
+  },
+  "2024-12": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes122024.htm",
+    "status": 200,
+    "bytes": 48134
+  },
+  "2025-01": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes012025.htm",
+    "status": 200,
+    "bytes": 48124
+  },
+  "2025-02": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes022025.htm",
+    "status": 200,
+    "bytes": 48143
+  },
+  "2025-03": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes032025.htm",
+    "status": 200,
+    "bytes": 48107
+  },
+  "2025-04": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes042025.htm",
+    "status": 200,
+    "bytes": 48332
+  },
+  "2025-05": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes052025.htm",
+    "status": 200,
+    "bytes": 48102
+  },
+  "2025-06": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes062025.htm",
+    "status": 200,
+    "bytes": 48687
+  },
+  "2025-07": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes072025.htm",
+    "status": 200,
+    "bytes": 48109
+  },
+  "2025-08": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes082025.htm",
+    "status": 200,
+    "bytes": 48123
+  },
+  "2025-09": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes092025.htm",
+    "status": 200,
+    "bytes": 47706
+  },
+  "2025-10": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes102025.htm",
+    "status": 200,
+    "bytes": 48074
+  },
+  "2025-11": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes112025.htm",
+    "status": 200,
+    "bytes": 47702
+  },
+  "2025-12": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes122025.htm",
+    "status": 200,
+    "bytes": 47491
+  },
+  "2026-01": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes012026.htm",
+    "status": 200,
+    "bytes": 47989
+  },
+  "2026-02": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes022026.htm",
+    "status": 200,
+    "bytes": 47441
+  },
+  "2026-03": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes032026.htm",
+    "status": 200,
+    "bytes": 47906
+  },
+  "2026-04": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes042026.htm",
+    "status": 200,
+    "bytes": 48174
+  },
+  "2026-05": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes052026.htm",
+    "status": 200,
+    "bytes": 47668
+  },
+  "2026-06": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes062026.htm",
+    "status": 200,
+    "bytes": 48659
+  },
+  "2026-07": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes072026-1.htm",
+    "status": 200,
+    "bytes": 47663
+  },
+  "2026-08": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes082026.htm",
+    "status": 200,
+    "bytes": 47621
+  },
+  "2026-09": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes092026.htm",
+    "status": 200,
+    "bytes": 47627
+  },
+  "2026-10": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/TasasVigentes102026.htm",
+    "status": 200,
+    "bytes": 47868
+  },
+  "2026-11": {
+    "url": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+    "status": 200,
+    "bytes": 47683
+  }
+}

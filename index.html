@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Financiero del Ecuador · Análisis de Crédito, Tasas y Morosidad</title>
+  <meta name="description" content="Tablero de análisis de datos del sistema financiero ecuatoriano con cifras oficiales de Superintendencia de Bancos, SEPS, Banco Central del Ecuador y Banco Mundial (FB.AST.NPER.ZS).">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <div class="disclaimer-bar" role="note" aria-label="Aviso educativo">
+    <div class="container">
+      <span><strong class="disclaimer-strong">Aviso:</strong> Herramienta educativa. No es asesoría financiera.</span>
+      <span>Datos públicos oficiales · Descarga verificada: 2026-11-26 · Ecuador y benchmark regional</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <p class="brand-eyebrow">Portafolio de Análisis de Crédito y Datos Financieros</p>
+        <h1>Sistema Financiero del Ecuador</h1>
+        <p class="header-sub">Cartera bruta, depósitos, morosidad por segmento, tasas referenciales BCE y benchmark internacional (Banco Mundial)</p>
+      </div>
+      <div class="header-controls">
+        <nav class="nav-links" aria-label="Secciones del tablero">
+          <a href="#cartera">Cartera y Depósitos</a>
+          <a href="#morosidad">Morosidad</a>
+          <a href="#tasas">Tasas BCE</a>
+          <a href="#benchmark">Benchmark Global</a>
+          <a href="#prudencial-sql">Prudencial y SQL</a>
+          <a href="#fuentes">Fuentes</a>
+        </nav>
+        <button id="theme-toggle" class="btn" type="button" aria-pressed="false" aria-label="Cambiar entre modo claro y modo oscuro">
+          <span id="theme-toggle-text">Modo oscuro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido-principal" class="container">
+    <!-- KPIs Ejecutivos -->
+    <section aria-labelledby="titulo-kpis">
+      <div class="section-head">
+        <div>
+          <h2 id="titulo-kpis">Panorama Ejecutivo del Sistema</h2>
+          <p class="section-desc">Cifras oficiales al último corte disponible en cada institución. Cada tarjeta indica tipo de indicador, fecha de corte y enlace directo a la fuente original.</p>
+        </div>
+      </div>
+      <div id="kpi-grid" class="kpi-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- Sección 1: Cartera y Depósitos -->
+    <section id="cartera" class="section" aria-labelledby="titulo-cartera">
+      <div class="section-head">
+        <div>
+          <h2 id="titulo-cartera">1. Cartera de Crédito Bruta y Fondeo (Depósitos)</h2>
+          <p class="section-desc">Evolución mensual de la intermediación financiera del Sector Financiero Privado y Popular y Solidario (SFPr + SFPS) en millones de dólares estadounidenses (MM USD).</p>
+        </div>
+        <div class="control-group" role="group" aria-label="Ventana temporal para series de Ecuador">
+          <span class="control-label">Ventana:</span>
+          <button class="btn window-btn" type="button" data-window="2022-01" aria-pressed="false">2022–2026</button>
+          <button class="btn window-btn" type="button" data-window="2020-01" aria-pressed="false">2020–2026</button>
+          <button class="btn window-btn is-active" type="button" data-window="2015-01" aria-pressed="true">2015–2026</button>
+          <button class="btn window-btn" type="button" data-window="2002-07" aria-pressed="false">Completa (2002–2026)</button>
+        </div>
+      </div>
+
+      <div class="grid-2-wide">
+        <article class="card">
+          <h3>Evolución de Depósitos Totales vs. Cartera Bruta (MM USD)</h3>
+          <p class="card-subtitle">Desliza el control o pasa el cursor sobre el gráfico para inspeccionar el ratio Cartera/Depósitos (LDR) de cualquier mes.</p>
+          <div id="legend-cartera-dep" class="chart-legend"></div>
+          <div id="chart-cartera-dep" class="chart-wrap"></div>
+          <div class="scrubber-row">
+            <label for="scrub-cartera">Mes inspeccionado:</label>
+            <input id="scrub-cartera" type="range" min="0" max="100" value="100" aria-label="Seleccionar mes en la serie de cartera y depósitos">
+          </div>
+          <div id="readout-cartera" class="chart-readout" aria-live="polite"></div>
+          <div class="source-foot">
+            <span>Fuente: SB y SEPS vía BCE (<em>Datos.xlsx</em>, hojas 2. Depósitos y 3. Cartera) · Corte: <strong>2026-10</strong></span>
+            <a href="https://contenido.bce.fin.ec/documentos/PublicacionesNotas/Datos.xlsx" target="_blank" rel="noopener noreferrer">Archivo oficial BCE (.xlsx)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Composición de la Cartera Bruta por Segmento (2026-10)</h3>
+          <p class="card-subtitle">Saldo en MM USD, participación porcentual y crecimiento interanual (oct 2025 vs. oct 2026).</p>
+          <div id="chart-cartera-seg" class="chart-wrap"></div>
+          <div class="table-scroll">
+            <table id="table-cartera-seg">
+              <thead>
+                <tr>
+                  <th>Segmento</th>
+                  <th class="num">Saldo (MM USD)</th>
+                  <th class="num">Part. %</th>
+                  <th class="num">Var. YoY</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="source-foot">
+            <span>Fuente: SB y SEPS vía BCE · Corte: <strong>2026-10</strong></span>
+            <a href="https://contenido.bce.fin.ec/series-de-datos-indicadores-monetarios-y-financieros/" target="_blank" rel="noopener noreferrer">Portal BCE</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección 2: Morosidad por Segmento -->
+    <section id="morosidad" class="section" aria-labelledby="titulo-morosidad">
+      <div class="section-head">
+        <div>
+          <h2 id="titulo-morosidad">2. Calidad de Activos: Morosidad por Segmento de Crédito</h2>
+          <p class="section-desc">Índice de morosidad ampliada (cartera improductiva / cartera bruta, %). Activa o desactiva segmentos para comparar ciclos de riesgo.</p>
+        </div>
+      </div>
+
+      <div class="grid-2-wide">
+        <article class="card">
+          <h3>Evolución Mensual de la Morosidad por Segmento (%)</h3>
+          <p class="card-subtitle">Comparte la ventana temporal seleccionada arriba. Nota oficial BCE/SB: el segmento Educativo refleja reclasificaciones contables en entidades especializadas.</p>
+          <div id="chips-morosidad" class="chip-row" role="group" aria-label="Filtrar segmentos de morosidad"></div>
+          <div id="chart-morosidad" class="chart-wrap"></div>
+          <div class="scrubber-row">
+            <label for="scrub-morosidad">Mes inspeccionado:</label>
+            <input id="scrub-morosidad" type="range" min="0" max="100" value="100" aria-label="Seleccionar mes en la serie de morosidad">
+          </div>
+          <div id="readout-morosidad" class="chart-readout" aria-live="polite"></div>
+          <div class="source-foot">
+            <span>Fuente: SB y SEPS vía BCE (<em>Datos.xlsx</em>, hoja 3. Morosidad) · Corte: <strong>2026-10</strong></span>
+            <a href="https://contenido.bce.fin.ec/documentos/PublicacionesNotas/Datos.xlsx" target="_blank" rel="noopener noreferrer">Archivo oficial BCE (.xlsx)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Semáforo de Riesgo por Segmento (2026-10)</h3>
+          <p class="card-subtitle">Comparación del último dato contra su promedio móvil de 12 meses y el máximo registrado desde enero 2015.</p>
+          <div class="table-scroll">
+            <table id="table-morosidad-riesgo">
+              <thead>
+                <tr>
+                  <th>Segmento</th>
+                  <th class="num">Oct 2026</th>
+                  <th class="num">Prom. 12m</th>
+                  <th class="num">Pico 15–26</th>
+                  <th class="num">vs. 12m</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div id="nota-ref-reestr" class="chart-readout" style="margin-top:0.9rem;"></div>
+          <div class="source-foot">
+            <span>Fuente: SB y SEPS vía BCE · Corte: <strong>2026-10</strong></span>
+            <a href="https://www.superbancos.gob.ec/estadisticas/portalestudios/sistema-financiero-publico-y-privado/" target="_blank" rel="noopener noreferrer">Portal Superintendencia de Bancos</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección 3: Tasas Referenciales BCE -->
+    <section id="tasas" class="section" aria-labelledby="titulo-tasas">
+      <div class="section-head">
+        <div>
+          <h2 id="titulo-tasas">3. Tasas de Interés Efectivas Referenciales y Topes Legales (BCE)</h2>
+          <p class="section-desc">Todas las tasas corresponden a <strong>tasas efectivas anuales (%)</strong> publicadas mensualmente por el BCE (promedio ponderado por monto y topes vigentes fijados por la JPRFM).</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3>Ciclo de Tasas Activas (TAR) vs. Tasa Pasiva Referencial (TPR), 2022–2026</h3>
+          <p class="card-subtitle">59 observaciones mensuales oficiales (enero 2022 – noviembre 2026). Muestra el descenso de la TPR desde su pico en julio 2024 (8,45 %) hasta 4,83 % en noviembre 2026.</p>
+          <div id="legend-tasas" class="chart-legend"></div>
+          <div id="chart-tasas-serie" class="chart-wrap"></div>
+          <div class="scrubber-row">
+            <label for="scrub-tasas">Mes inspeccionado:</label>
+            <input id="scrub-tasas" type="range" min="0" max="58" value="58" aria-label="Seleccionar mes en la serie de tasas BCE">
+          </div>
+          <div id="readout-tasas" class="chart-readout" aria-live="polite"></div>
+          <div class="source-foot">
+            <span>Fuente: BCE (<em>TasasVigentesMMYYYY.htm</em> e <em>Indice.htm</em>) · Corte: <strong>2026-11</strong></span>
+            <a href="https://contenido.bce.fin.ec/informacion-historica-de-tasas-maximas-y-referenciales/" target="_blank" rel="noopener noreferrer">Histórico oficial BCE</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>TAR vs. Tope Máximo Legal y Spread sobre TPR (Noviembre 2026)</h3>
+          <p class="card-subtitle">Barra sólida: Tasa Activa Efectiva Referencial (TAR). Marcador vertical: Tasa Activa Efectiva Máxima legal. Base pasiva: TPR = 4,83 % anual.</p>
+          <div id="chart-tasas-barras" class="chart-wrap"></div>
+          <div class="source-foot">
+            <span>Fuente: BCE (<em>Indice.htm</em>, cobertura 371 entidades) · Corte: <strong>2026-11</strong></span>
+            <a href="https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm" target="_blank" rel="noopener noreferrer">Boletín vigente BCE</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección 4: Benchmark Internacional (Banco Mundial) -->
+    <section id="benchmark" class="section" aria-labelledby="titulo-benchmark">
+      <div class="section-head">
+        <div>
+          <h2 id="titulo-benchmark">4. Benchmark Internacional de Morosidad Bancaria (Banco Mundial)</h2>
+          <p class="section-desc">Indicador <code>FB.AST.NPER.ZS</code> (<em>Bank nonperforming loans to total gross loans, %</em>) vía API v2 del Banco Mundial (FMI-FSI): Ecuador frente a Colombia, Perú, México, Chile y Estados Unidos.</p>
+        </div>
+      </div>
+
+      <div class="grid-2-wide">
+        <article class="card">
+          <h3>Trayectoria Anual de Morosidad Bancaria (2010–2025, %)</h3>
+          <p class="card-subtitle">Ecuador en línea gruesa. Nota de corte: Perú dispone de dato oficial hasta 2024 en la API del Banco Mundial (actualizada 2026-11-11); el resto llega a 2025.</p>
+          <div id="legend-wb" class="chart-legend"></div>
+          <div id="chart-wb-lines" class="chart-wrap"></div>
+          <div class="source-foot">
+            <span>Fuente: Banco Mundial API v2 (<code>FB.AST.NPER.ZS</code>) · Actualización API: <strong>2026-11-11</strong></span>
+            <a href="https://api.worldbank.org/v2/country/ECU;COL;PER;MEX;CHL;USA/indicator/FB.AST.NPER.ZS?format=json&per_page=1000" target="_blank" rel="noopener noreferrer">JSON oficial API</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Brecha de Morosidad al Último Año Disponible</h3>
+          <p class="card-subtitle">Comparación ordenada por nivel de morosidad y brecha en puntos porcentuales (pp) frente a Ecuador.</p>
+          <div id="chart-wb-bars" class="chart-wrap"></div>
+          <div class="table-scroll">
+            <table id="table-wb">
+              <thead>
+                <tr>
+                  <th>País</th>
+                  <th class="num">Año</th>
+                  <th class="num">Actual</th>
+                  <th class="num">2019</th>
+                  <th class="num">vs. ECU</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="source-foot">
+            <span>Fuente: Banco Mundial / FMI-FSI · Indicador <code>FB.AST.NPER.ZS</code></span>
+            <a href="https://data.worldbank.org/indicator/FB.AST.NPER.ZS" target="_blank" rel="noopener noreferrer">Ficha Banco Mundial</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección 5: Prudencial + Consultas SQLite -->
+    <section id="prudencial-sql" class="section" aria-labelledby="titulo-prudencial">
+      <div class="section-head">
+        <div>
+          <h2 id="titulo-prudencial">5. Indicadores Prudenciales por Subsistema y Consultas SQLite</h2>
+          <p class="section-desc">Contraste de Solvencia, Liquidez y Rentabilidad (ROE) entre Bancos Privados, Cooperativas y Mutualistas, junto con las 6 consultas SQL documentadas y verificadas contra pandas.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3>Solvencia, Liquidez y ROE por Subsistema (2026-10)</h3>
+          <p class="card-subtitle">Barras comparativas de los tres pilares prudenciales. Las cooperativas mantienen mayor solvencia y liquidez; los bancos privados lideran el ROE.</p>
+          <div id="chart-prudencial" class="chart-wrap"></div>
+          <div class="table-scroll">
+            <table id="table-prudencial">
+              <thead>
+                <tr>
+                  <th>Subsistema</th>
+                  <th class="num">Solvencia %</th>
+                  <th class="num">Liquidez %</th>
+                  <th class="num">ROE %</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="source-foot">
+            <span>Fuente: SB y SEPS vía BCE (<em>Datos.xlsx</em>, hojas 4. Índices) · Corte: <strong>2026-10</strong></span>
+            <a href="https://contenido.bce.fin.ec/documentos/PublicacionesNotas/Datos.xlsx" target="_blank" rel="noopener noreferrer">Archivo oficial BCE (.xlsx)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Explorador de Consultas SQL (SQLite == pandas)</h3>
+          <p class="card-subtitle">Todas las consultas de <code>sql/consultas_analisis.sql</code> fueron ejecutadas en SQLite y validadas numéricamente contra cálculos independientes en pandas.</p>
+          <div class="control-group" style="margin-bottom:0.5rem;">
+            <label for="sql-selector" class="control-label">Consulta:</label>
+            <select id="sql-selector" class="btn" aria-label="Seleccionar consulta SQLite"></select>
+          </div>
+          <p id="sql-desc" class="card-subtitle" style="margin-bottom:0.4rem;"></p>
+          <pre id="sql-code" class="sql-code"></pre>
+          <div class="table-scroll">
+            <table id="sql-result-table">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección 6: Hallazgos basados estrictamente en datos -->
+    <section id="hallazgos" class="section" aria-labelledby="titulo-hallazgos">
+      <div class="section-head">
+        <div>
+          <h2 id="titulo-hallazgos">6. Hallazgos Clave (Derivados Exclusivamente de los Datos)</h2>
+          <p class="section-desc">Síntesis analítica respaldada por las series oficiales descargadas y las consultas verificadas en Python y SQLite.</p>
+        </div>
+      </div>
+      <div id="insights-grid" class="insights-grid"></div>
+    </section>
+
+    <!-- Sección 7: Validaciones y Registro de Fuentes -->
+    <section id="fuentes" class="section" aria-labelledby="titulo-fuentes">
+      <div class="section-head">
+        <div>
+          <h2 id="titulo-fuentes">7. Auditoría de Calidad de Datos y Registro de Fuentes Oficiales</h2>
+          <p class="section-desc">Cada cifra publicada en este tablero proviene de archivos descargados y verificados con hash SHA-256, fecha de corte, cita literal corta y enlace original.</p>
+        </div>
+      </div>
+
+      <article class="card">
+        <h3>Validaciones Automatizadas del Pipeline Python (pandas + SQLite)</h3>
+        <p id="val-summary" class="card-subtitle"></p>
+        <ul id="val-list" class="val-list"></ul>
+
+        <h3 style="margin-top:1.35rem;">Fuentes Oficiales Descargadas</h3>
+        <div id="sources-list"></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span><strong>Herramienta educativa. No es asesoría financiera.</strong></span>
+      <span>Hecho por Bryan Román · <a href="https://www.linkedin.com/in/bryan-roman-ai" target="_blank" rel="noopener noreferrer">linkedin.com/in/bryan-roman-ai</a></span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

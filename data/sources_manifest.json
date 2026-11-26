@@ -1,0 +1,49 @@
+{
+  "fecha_descarga": "2026-11-26",
+  "alcance_geografico": "Ecuador (BCE, SB, SEPS) y benchmark internacional (Colombia, Perú, México, Chile, EE. UU.)",
+  "fuentes": [
+    {
+      "id": "bce_sb_seps_datos",
+      "institucion": "Superintendencia de Bancos (SB) y SEPS — compilado y publicado por el Banco Central del Ecuador (BCE)",
+      "titulo": "Monitoreo de los Principales Instrumentos de Política Monetaria e Indicadores Financieros (Datos.xlsx)",
+      "url_archivo": "https://contenido.bce.fin.ec/documentos/PublicacionesNotas/Datos.xlsx",
+      "url_portal": "https://contenido.bce.fin.ec/series-de-datos-indicadores-monetarios-y-financieros/",
+      "url_superbancos": "https://www.superbancos.gob.ec/estadisticas/portalestudios/sistema-financiero-publico-y-privado/",
+      "fecha_descarga": "2026-11-26",
+      "fecha_corte": "2026-10",
+      "cobertura_temporal": "2002-07 a 2026-10 (mensual, 292 meses)",
+      "moneda_y_unidad": "Millones de dólares estadounidenses (MM USD) para saldos; porcentaje (%) para morosidad, solvencia, liquidez y ROE",
+      "nota_metodologica": "Sector Financiero Privado (Bancos Privados y Mutualistas) y Sector Financiero Popular y Solidario (Cooperativas Seg. 1 y Seg. 2 desde ene-2015). Considera entidades operativas al último corte (omite entidades en liquidación forzosa: Coop. Cámara de Comercio de Ambato dic-2024, Amibank mar-2025, Coop. Crea jul-2025).",
+      "cita_literal": "Hoja '3. Cartera' y '3. Morosidad' (Fuente: SB y SEPS), corte 2026-10-01: Cartera de crédito bruta Total = 76,357.06 millones USD; Depósitos Totales = 89,116.47 millones USD; Índice de morosidad Total = 4.22% (Microcrédito = 8.68%).",
+      "sha256": "fabcc5b327bc59fd62404d5123a10a6612c2b2b10a0fbf13f69bd8a7509f598f"
+    },
+    {
+      "id": "bce_tasas_referenciales",
+      "institucion": "Banco Central del Ecuador (BCE) / Junta de Política y Regulación Financiera y Monetaria (JPRFM)",
+      "titulo": "Tasas de Interés Activas y Pasivas Efectivas Referenciales y Máximas Vigentes",
+      "url_archivo": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "url_portal": "https://contenido.bce.fin.ec/informacion-historica-de-tasas-maximas-y-referenciales/",
+      "fecha_descarga": "2026-11-26",
+      "fecha_corte": "2026-11",
+      "cobertura_temporal": "2022-01 a 2026-11 (mensual, 59 meses)",
+      "tipo_tasa": "Tasa efectiva anual (%): promedio ponderado por monto (TAR y TPR) y topes máximos legales vigentes (JPRFM)",
+      "nota_metodologica": "Para noviembre 2026 las tasas activas y pasivas efectivas referenciales se calculan con operaciones de las semanas del 17 de septiembre al 14 de octubre de 2026 con cobertura de 371 entidades financieras.",
+      "cita_literal": "BCE Indice.htm (Noviembre 2026): Tasa Pasiva Referencial = 4.83% anual; Productivo Corporativo TAR = 6.88% (Máxima = 7.74%); Consumo TAR = 15.69% (Máxima = 16.77%).",
+      "sha256_ultimo_mes": "c2974045e99b1bf506acab159b02cfdc795b5a129eb020b57b27113ef60f79f3"
+    },
+    {
+      "id": "worldbank_npl",
+      "institucion": "Banco Mundial (World Development Indicators / FMI Financial Soundness Indicators)",
+      "titulo": "Bank nonperforming loans to total gross loans (%) — Indicador FB.AST.NPER.ZS",
+      "url_archivo": "https://api.worldbank.org/v2/country/ECU;COL;PER;MEX;CHL;USA/indicator/FB.AST.NPER.ZS?format=json&per_page=1000",
+      "url_portal": "https://data.worldbank.org/indicator/FB.AST.NPER.ZS",
+      "fecha_descarga": "2026-11-26",
+      "fecha_corte": "2025 (ECU, COL, MEX, CHL, USA) / 2024 (PER); API lastupdated=2026-11-11",
+      "cobertura_temporal": "2001 a 2025 (anual)",
+      "tipo_indicador": "Porcentaje (%) de préstamos bancarios improductivos sobre cartera bruta total",
+      "nota_metodologica": "Indicador armonizado FMI-FSI reportado vía API v2 del Banco Mundial. Al corte de descarga (2026-11-26), Perú registra último dato en 2024.",
+      "cita_literal": "World Bank API v2 (lastupdated 2026-11-11, FB.AST.NPER.ZS): Ecuador 2025 = 4.45%; Perú 2024 = 3.99%.",
+      "sha256": "d9042e4921a99b296efcbf1075cda060d6463a50cc8dc32ea38a1dcc56f0c2ba"
+    }
+  ]
+}
